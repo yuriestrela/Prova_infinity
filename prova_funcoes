@@ -1,0 +1,23 @@
+def calcular_media():
+  media = calculo / 3
+  return f'Sua média é {media}'
+
+def verificar_situacao():
+  media = float(calcular_media().split()[-1])
+  if media < 7:
+    return 'Reprovado!'
+  elif media >= 7 and media <10:
+    return 'Aprovado!'
+  elif media == 10:
+    return 'Parabéns, sua média é 10!'
+  else:
+    return 'Nota inválida!'
+
+calculo = 0
+
+for i in range(3):
+  nota = float(input(f'Digite a {i+1}° nota: '))
+  calculo += nota
+
+print(calcular_media())
+print(verificar_situacao())
